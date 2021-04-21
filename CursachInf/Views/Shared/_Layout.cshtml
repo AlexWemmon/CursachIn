@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    @await Html.PartialAsync("CssPartial")
+    @await Html.PartialAsync("MetatagsPartial")
+
+
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <header id="header" class="alt">
+            <!-- Header -->
+            @*@await Html.PartialAsync("HeaderPartial")*@
+        </header>
+        <!-- Nav -->
+        <nav id="nav">
+            @await Html.PartialAsync("NavigationPartial")
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            @RenderBody()
+            <!-- Introduction -->
+            @await Html.PartialAsync("IntroductionPartial")
+
+            <!-- First Section -->
+            @* @await Html.PartialAsync("FirstSectionPartial")*@
+
+            <!-- Second Section -->
+            @*   @await Html.PartialAsync("SecondSectionPartial")*@
+            <!-- Get Started -->
+            @* @await Html.PartialAsync("GetStartedPartial")*@
+
+            <form asp-action="Parser" asp-controller="Home"
+                  enctype="multipart/form-data">
+                <p align="center">
+                    <input type="file" class="btn-primary" name ="file" required>
+                    
+                    <input type="submit" value="Добавить из файла" class="sr-only-focusable"/>
+                </p>
+            </form>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            @await Html.PartialAsync("FooterPartial")
+        </footer>
+
+    </div>
+    @await Html.PartialAsync("ScriptsPartial")
+
+
+</body>
+</html>
