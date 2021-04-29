@@ -26,8 +26,15 @@ using CursachInf.Models.ViewComponents;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\truen\source\repos\CursachInf\CursachInf\_ViewImports.cshtml"
+using CursachInf.Domain.Entities;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"13641c7d52d6459539088fcc32a1253b8c3b598d", @"/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"89aac9129633dde07899f5ea9040d18985faeffb", @"/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e6b57ee0133d69f4d5e638a6b38ac33a49c3f514", @"/_ViewImports.cshtml")]
     public class _ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

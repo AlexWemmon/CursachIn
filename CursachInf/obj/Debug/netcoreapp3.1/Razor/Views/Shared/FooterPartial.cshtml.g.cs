@@ -26,8 +26,15 @@ using CursachInf.Models.ViewComponents;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\truen\source\repos\CursachInf\CursachInf\_ViewImports.cshtml"
+using CursachInf.Domain.Entities;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"812cdd47c7bb5b14c3f2be7808303acc542c3f8b", @"/Views/Shared/FooterPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"89aac9129633dde07899f5ea9040d18985faeffb", @"/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e6b57ee0133d69f4d5e638a6b38ac33a49c3f514", @"/_ViewImports.cshtml")]
     public class Views_Shared_FooterPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("href", new global::Microsoft.AspNetCore.Html.HtmlString("~/html/generic.html"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -57,7 +64,7 @@ using CursachInf.Models.ViewComponents;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("\r\n    <section>\r\n        <h2>Описание</h2>\r\n        <p>Текст,раскрывающий описание</p>\r\n        <ul class=\"actions\">\r\n            <li>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "812cdd47c7bb5b14c3f2be7808303acc542c3f8b3981", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "812cdd47c7bb5b14c3f2be7808303acc542c3f8b4166", async() => {
                 WriteLiteral("Узнать больше");
             }
             );

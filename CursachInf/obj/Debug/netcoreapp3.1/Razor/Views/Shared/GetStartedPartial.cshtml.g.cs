@@ -26,8 +26,15 @@ using CursachInf.Models.ViewComponents;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\truen\source\repos\CursachInf\CursachInf\_ViewImports.cshtml"
+using CursachInf.Domain.Entities;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f33ed396de2de80d0470589f333da03e0920f932", @"/Views/Shared/GetStartedPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"89aac9129633dde07899f5ea9040d18985faeffb", @"/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e6b57ee0133d69f4d5e638a6b38ac33a49c3f514", @"/_ViewImports.cshtml")]
     public class Views_Shared_GetStartedPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("href", new global::Microsoft.AspNetCore.Html.HtmlString("~/html/generic.html"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -68,7 +75,7 @@ using CursachInf.Models.ViewComponents;
     <footer class=""major"">
         <ul class=""actions special"">
             <li>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f33ed396de2de80d0470589f333da03e0920f9324600", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f33ed396de2de80d0470589f333da03e0920f9324785", async() => {
                 WriteLiteral("Get Started");
             }
             );
@@ -84,7 +91,7 @@ using CursachInf.Models.ViewComponents;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</li>\r\n            <li>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f33ed396de2de80d0470589f333da03e0920f9325784", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f33ed396de2de80d0470589f333da03e0920f9325969", async() => {
                 WriteLiteral("Learn More");
             }
             );

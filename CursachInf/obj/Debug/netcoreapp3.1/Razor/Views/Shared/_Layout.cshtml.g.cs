@@ -26,8 +26,15 @@ using CursachInf.Models.ViewComponents;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\truen\source\repos\CursachInf\CursachInf\_ViewImports.cshtml"
+using CursachInf.Domain.Entities;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a76f9fd02a90e2ad7b41d03d6d00ecae25adc751", @"/Views/Shared/_Layout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"89aac9129633dde07899f5ea9040d18985faeffb", @"/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e6b57ee0133d69f4d5e638a6b38ac33a49c3f514", @"/_ViewImports.cshtml")]
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Parser", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -62,7 +69,7 @@ using CursachInf.Models.ViewComponents;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE HTML>\r\n\r\n<html>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a76f9fd02a90e2ad7b41d03d6d00ecae25adc7514853", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a76f9fd02a90e2ad7b41d03d6d00ecae25adc7515038", async() => {
                 WriteLiteral("\r\n    ");
 #nullable restore
 #line 5 "C:\Users\truen\source\repos\CursachInf\CursachInf\Views\Shared\_Layout.cshtml"
@@ -92,7 +99,7 @@ Write(await Html.PartialAsync("MetatagsPartial"));
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a76f9fd02a90e2ad7b41d03d6d00ecae25adc7516328", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a76f9fd02a90e2ad7b41d03d6d00ecae25adc7516513", async() => {
                 WriteLiteral("\r\n\r\n    <!-- Wrapper -->\r\n    <div id=\"wrapper\">\r\n        <header id=\"header\" class=\"alt\">\r\n            <!-- Header -->\r\n");
                 WriteLiteral("        </header>\r\n        <!-- Nav -->\r\n        <nav id=\"nav\">\r\n            ");
 #nullable restore
@@ -122,7 +129,7 @@ Write(await Html.PartialAsync("MetatagsPartial"));
                 WriteLiteral("\r\n            <!-- Second Section -->\r\n");
                 WriteLiteral("            <!-- Get Started -->\r\n");
                 WriteLiteral("\r\n            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a76f9fd02a90e2ad7b41d03d6d00ecae25adc7517967", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a76f9fd02a90e2ad7b41d03d6d00ecae25adc7518152", async() => {
                     WriteLiteral(@"
                 <p align=""center"">
                     <input type=""file"" class=""btn-primary"" name =""file"" required>

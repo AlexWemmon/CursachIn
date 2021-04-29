@@ -11,8 +11,8 @@
     var YValues = Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.DataPoints2);
     ViewData["Title"] = "Line Chart";
     int count = 0;
+    
 }
-
 <!DOCTYPE html>
 
 <html>
@@ -31,148 +31,157 @@
     </div>
 
 
-
-    <form asp-action="Index" align="center" asp-asp-controller="Home">
+   
+    <form align="center" asp-asp-controller="Home">
         <input type="submit" value="Проверить на значимость" />
         <button type="button" class="btn btn-primary" id="save-btn">Сохранить график</button>
-        <input type="submit" value="На главную" />
-        <details open="open" title="Расчёты">Подробности</details>
+        <input type="submit" asp-action="Excel" value="Export .xlsx" />
+        <input type="submit" asp-action="SecondStep" value="Второй этап" />
+        <details title="Расчёты">
+            Расчитанные величины и их значения
+            <div id="Event">
+                <table class="table" border="1" align="center">
+                    <thead>
+                        <tr>
+                            <th align="center">
+                                @Html.DisplayNameFor(model => model.X)
+                            </th>
+
+                            <th align="center">
+                                @Html.DisplayNameFor(model => model.Y)
+                            </th>
+
+                            <th align="center">
+                                x<sup>2</sup>
+                            </th>
+                            <th align="center">
+                                y<sup>2</sup>
+                            </th>
+                            <th align="center">
+                                @Html.DisplayNameFor(model => model.XmultY)
+                            </th>
+                            <th align="center">
+                                Σx
+                            </th>
+                            <th align="center">
+                                Σy
+                            </th>
+                            <th align="center">
+                                Σx<sup>2</sup>
+                            </th>
+                            <th align="center">
+                                Σy<sup>2</sup>
+                            </th>
+                            <th align="center">
+                                Σxy
+                            </th>
+                            <th align="center">
+                                Среднее величина x
+                            </th>
+                            <th align="center">
+                                Среднее величина y
+                            </th>
+                            <th align="center">
+                                Среднее величина x<sup>2</sup>
+                            </th>
+                            <th align="center">
+                                Среднее величина y<sup>2</sup>
+                            </th>
+                            <th align="center">
+                                Среднее величина xy
+                            </th>
+                            <th align="center">
+                                @Html.DisplayNameFor(model => model.r)
+                            </th>
+                            <th align="center">
+                                @Html.DisplayNameFor(model => model.Connection)
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td align="center">
+                                    @Html.DisplayFor(modelItem => item.X)
+                                </td>
+
+                                <td align="center">
+                                    @Html.DisplayFor(modelItem => item.Y)
+                                </td>
+                                <td align="center">
+                                    @Html.DisplayFor(modelItem => item.SquareX)
+                                </td>
+                                <td align="center">
+                                    @Html.DisplayFor(modelItem => item.SquareY)
+                                </td>
+                                <td align="center">
+                                    @Html.DisplayFor(modelItem => item.XmultY)
+                                </td>
+
+
+
+
+                                @{ if (count == 0)
+                                    {
+
+                                        <td align="center">
+                                            @Html.DisplayFor(modelItem => item.SumX)
+                                        </td>
+                                        <td align="center">
+                                            @Html.DisplayFor(modelItem => item.SumY)
+                                        </td>
+                                        <td align="center">
+                                            @Html.DisplayFor(modelItem => item.SumSqrX)
+                                        </td>
+                                        <td align="center">
+                                            @Html.DisplayFor(modelItem => item.SumSqrY)
+                                        </td>
+                                        <td align="center">
+                                            @Html.DisplayFor(modelItem => item.SumXmultY)
+                                        </td>
+                                        <td align="center">
+                                            @Html.DisplayFor(modelItem => item.AvgX)
+                                        </td>
+                                        <td align="center">
+                                            @Html.DisplayFor(modelItem => item.AvgY)
+                                        </td>
+                                        <td align="center">
+                                            @Html.DisplayFor(modelItem => item.AvgSqrX)
+                                        </td>
+                                        <td align="center">
+                                            @Html.DisplayFor(modelItem => item.AvgSqrY)
+                                        </td>
+                                        <td align="center">
+                                            @Html.DisplayFor(modelItem => item.AvgXmultY)
+                                        </td>
+
+                                        <td align="center">
+                                            @Html.DisplayFor(modelItem => item.r)
+                                        </td>
+                                        <td align="center">
+                                            @Html.DisplayFor(modelItem => item.Connection)
+                                        </td>
+                                        count++;
+                                    }
+                                }
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </details>
 
     </form>
-    <table class="table" border="1" align="center">
-        <thead>
-            <tr>
-                <th align="center">
-                    @Html.DisplayNameFor(model => model.X)
-                </th>
 
-                <th align="center">
-                    @Html.DisplayNameFor(model => model.Y)
-                </th>
-
-                <th align="center">
-                    x<sup>2</sup>
-                </th>
-                <th align="center">
-                    y<sup>2</sup>
-                </th>
-                <th align="center">
-                    @Html.DisplayNameFor(model => model.XmultY)
-                </th>
-                <th align="center">
-                    Σx
-                </th>
-                <th align="center">
-                    Σy
-                </th>
-                <th align="center">
-                    Σx<sup>2</sup>
-                </th>
-                <th align="center">
-                    Σx<sup>2</sup>
-                </th>
-                <th align="center">
-                    Σxy
-                </th>
-                <th align="center">
-                    Среднее величина x
-                </th> 
-                <th align="center">
-                    Среднее величина y
-                </th>
-                <th align="center">
-                    Среднее величина x<sup>2</sup>
-                </th>
-                <th align="center"> 
-                    Среднее величина y<sup>2</sup>
-                </th>
-                <th align="center">
-                    Среднее величина xy
-                </th>
-                <th align="center">
-                    @Html.DisplayNameFor(model => model.r)
-                </th>
-                <th align="center">
-                    @Html.DisplayNameFor(model => model.Connection)
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-            <tr>
-                <td align="center">
-                    @Html.DisplayFor(modelItem => item.X)
-                </td>
-
-                <td align="center">
-                    @Html.DisplayFor(modelItem => item.Y)
-                </td>
-                <td align="center">
-                    @Html.DisplayFor(modelItem => item.SquareX)
-                </td>
-                <td align="center">
-                    @Html.DisplayFor(modelItem => item.SquareY)
-                </td>
-                <td align="center">
-                    @Html.DisplayFor(modelItem => item.XmultY)
-                </td>
-                
-                   
-               
-
-                @{ if (count == 0)
-                    {
-
-                        <td align="center">
-                            @Html.DisplayFor(modelItem => item.SumX)
-                        </td>
-                        <td align="center">
-                            @Html.DisplayFor(modelItem => item.SumY)
-                        </td>
-                        <td align="center">
-                            @Html.DisplayFor(modelItem => item.SumSqrX)
-                        </td>
-                        <td align="center">
-                            @Html.DisplayFor(modelItem => item.SumSqrY)
-                        </td>
-                        <td align="center">
-                            @Html.DisplayFor(modelItem => item.SumXmultY)
-                        </td>
-                        <td align="center">
-                            @Html.DisplayFor(modelItem => item.AvgX)
-                        </td>
-                        <td align="center">
-                            @Html.DisplayFor(modelItem => item.AvgY)
-                        </td>
-                        <td align="center">
-                            @Html.DisplayFor(modelItem => item.AvgSqrX)
-                        </td>
-                        <td align="center">
-                            @Html.DisplayFor(modelItem => item.AvgSqrY)
-                        </td>
-                        <td align="center">
-                            @Html.DisplayFor(modelItem => item.AvgXmultY)
-                        </td>
-
-                        <td align="center">
-                            @Html.DisplayFor(modelItem => item.r)
-                        </td>
-                        <td align="center">
-                            @Html.DisplayFor(modelItem => item.Connection)
-                        </td>
-                        count++;
-                    }
-                }
-            </tr>
-
-            }
-        </tbody>
-    </table>
 </body>
 </html>
 @await Html.PartialAsync("ScriptsPartial")
-
+<script type="text/javascript" src="~/js/libs/tableExport.js"></script>
+<script type="text/javascript" src="~/js/libs/html2canvas/html2canvas.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="~/js/libs/js-xlsx/xlsx.core.min.js"></script>
 <script type="text/javascript">
 
 
@@ -243,10 +252,7 @@ var options = {
        });
 
         });
-   @* var url_base64 = document.getElementById('chart').toDataURL('image/png');
 
-
-        link.href = url_base64;*@
 
 
     $("#save-btn").click(function () {
@@ -254,5 +260,5 @@ var options = {
             saveAs(blob, "downloaded_chart");
         });
     });
-
+   
 </script>  

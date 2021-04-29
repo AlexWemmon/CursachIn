@@ -41,5 +41,6 @@ namespace CursachInf.Domain.Entities
         public double r { get; set; }
         [Display(Name = "Связь")]
         public string Connection { get; set; }
+        public List<Koefficient>Koefficients { get; set; }
     }
 }
